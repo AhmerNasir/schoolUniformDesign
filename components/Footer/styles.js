@@ -29,12 +29,7 @@ export default css `
   }
   
   .footer .col ul li {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 14px;
     cursor: pointer;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
     list-style-type: none;
     margin-top: 10px;
   }
@@ -71,6 +66,16 @@ export default css `
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards-container {
+    margin-left: 20px;
   }
 
 `

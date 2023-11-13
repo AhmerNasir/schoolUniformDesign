@@ -82,7 +82,6 @@ export default css`
     outline: none;
   }
 
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 768px) {
     .form-main-container {
       flex-direction: column;
@@ -99,7 +98,7 @@ export default css`
       padding: 20px;
     }
     .form-fields > input {
-      width: 42%;
+      width: 40%;
     }
     .help-field > input {
       width: 93%;

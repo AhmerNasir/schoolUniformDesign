@@ -1,6 +1,64 @@
 import css from "styled-jsx/css";
 
 export default css`
+
+.header-image {
+  background-color: #32425c;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.add-to-bag {
+  background-color: #3b4463;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.right-side {
+  width: 40%;
+}
+
+.left-side {
+  width: 60%;
+}
+
+.header-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.header-divider {
+  height: 2px;
+  background: rgba(255,255,255,.8);
+  width: 35%;
+  margin-top: 22px;
+  margin-left: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-sub-title {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 24px;
+}
   .title {
     color: #000;
     margin-top: 30px;
@@ -34,6 +92,8 @@ export default css`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px
   }
 
   .card-wrapper {
@@ -75,7 +135,6 @@ export default css`
 
   .company-values-container {
     display: flex;
-    align-items: center;
     width: 100%;
     margin-bottom: 80px;
   }
@@ -129,6 +188,26 @@ export default css`
     margin-top: 20px;
   }
 
+  .hr-line {
+    height: 1px;
+    background-color: #000;
+    width: 38%;
+  }
+  
+  .our-company-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .our-product-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   @media (max-width: 768px) {
     .main-container {
       padding: 0 20px;
@@ -162,6 +241,48 @@ export default css`
     .bottom-section {
       padding: 20px;
       height: 260px;
+    }
+    .nav-wrapper {
+      padding: 20px;
+      flex-direction: column;
+    }
+    .right-side {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-side {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .header-sub-title {
+      font-size: 14px;
+      text-align: center;
+    }
+    .header-title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .right-side {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .add-to-bag {
+      margin-top: 20px;
+    }
+    .our-company-container {
+      margin-top: 20px;
+    }
+    .hr-line {
+      width: 26%;
+    }
+    .bottom-section {
+      margin-bottom: 100px;
     }
   }
 `;

@@ -2,6 +2,9 @@ import React from "react";
 import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { BiLogoFacebook } from "react-icons/bi";
 import styles from "./styles";
+import { IoIosArrowDown } from "react-icons/io";
+import Image from "next/image";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -28,29 +31,75 @@ function Footer() {
             <div className="col">
               <h1>Important Links</h1>
               <ul>
-                <li>Track Your Oder</li>
-                <li>About Us</li>
-                <li>Terms of Sevices</li>
+                <li><Link href="#">Track Your Oder</Link></li>
+                <li><Link href="#">About Us</Link></li>
+                <li><Link href="#">Terms of Sevices</Link></li>
               </ul>
             </div>
             <div className="col">
               <h1>Our Policies</h1>
               <ul>
-                <li>Privacy Policy</li>
-                <li>Shipping Policy</li>
-                <li>Refund Policy</li>
+                <li><Link href="#">Privacy Policy</Link></li>
+                <li><Link href="#">Shipping Policy</Link></li>
+                <li><Link href="#">Refund Policy</Link></li>
               </ul>
             </div>
             <div className="col">
               <h1>Contact Us</h1>
               <ul>
-                <li>Comapny@gmail.com</li>
-                <li>Redeem code</li>
-                <li>WHOIS lookup</li>
+                <li><Link href="#">Comapny@gmail.com</Link></li>
+                <li><Link href="#">Redeem code</Link></li>
+                <li><Link href="#">WHOIS lookup</Link></li>
               </ul>
             </div>
           </div>
           <div className="footer-divider" />
+          <div
+            style={{
+              margin: '20px 0',
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <p>@2023 Company. All rights reserved</p>
+
+            <div className="footer-text">
+              <p>Canada (CAD $)</p>{" "}
+              <IoIosArrowDown
+                color="#fff"
+                style={{ width: "15px", height: "15px" }}
+              />
+            <div className="cards-container">
+              <Image
+                src="/static/images/visa-card.png"
+                alt="card-images"
+                width={30}
+                height={30}
+              />
+              <Image
+                src="/static/images/visa-card.png"
+                alt="card-images"
+                width={30}
+                height={30}
+              />
+              <Image
+                src="/static/images/visa-card.png"
+                alt="card-images"
+                width={30}
+                height={30}
+              />
+              <Image
+                src="/static/images/visa-card.png"
+                alt="card-images"
+                width={30}
+                height={30}
+              />
+            </div>
+            </div>
+            <div></div>
+
+          </div>
         </div>
       </div>
       <style jsx>{styles}</style>

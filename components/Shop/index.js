@@ -9,6 +9,8 @@ import SizeOptions from "../Sizes";
 import useResponsiveWindow from "@/hooks/useResponsiveWindow";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ShopOptions from "../ShopOptions";
+import { IoIosArrowForward } from "react-icons/io";
+import Navbar from "../Navbar";
 
 const CATEGORIES = [
   {
@@ -38,7 +40,17 @@ function Shop() {
   const isMobile = useResponsiveWindow();
 
   return (
-    <BaseLayout changeHeader>
+    <BaseLayout>
+          <section className="hero-image">
+          <Navbar />
+          <div className="wrapper">
+            <div className="main-title">School Uniforms</div>
+            <div className="add-to-bag">
+              <div>Shop Now</div>
+              <IoIosArrowForward />
+            </div>
+          </div>
+      </section>
       <div className="shop-main-container">
         {!isMobile && (
           <div className="shop-wrapper">

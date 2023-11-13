@@ -8,6 +8,7 @@ export default css`
 }
   table.report {
     border-collapse: collapse;
+    width: 100%;
   }
 
   table.report td {
@@ -28,6 +29,7 @@ export default css`
   td.normal {
     min-width: 200px;
     text-align: center;
+    font-size: 14px;
   }
 
   .center {
@@ -64,6 +66,7 @@ export default css`
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+    font-size: 14px;
   }
 
 table.report th {
@@ -77,5 +80,19 @@ table.report th {
       min-width: 100px;
       text-align: center;
     }
+  }
+
+  @media(max-width: 576px) {
+    td.normal {
+      min-width: 50px;
+      text-align: center;
+      font-size: 12px;
+    }
+    .table-container {
+      padding: 15px;
+  }
+  tr.new td {
+    font-size: 12px;
+  }
   }
 `;

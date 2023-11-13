@@ -1,6 +1,41 @@
 import css from "styled-jsx/css";
 
 export default css`
+  .hero-image {
+    background-image: url(/static/images/header-uniform.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  .add-to-bag {
+    background-color: #3b4463;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    color: #fff;
+    margin-top: 80px;
+    cursor: pointer;
+  }
+
+  .main-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+  }
   .title {
     font-size: 22px;
     font-weight: 600;
@@ -33,6 +68,7 @@ export default css`
   .search-container > input {
     border: none;
     height: 30px;
+    width: 100%;
   }
 
   .search-container > input:focus {
@@ -125,7 +161,7 @@ export default css`
     height: 1px;
     margin-top: 10px;
     width: 100%;
-    background: rgba(0,0,0,0.8)
+    background: rgba(0, 0, 0, 0.8);
   }
 
   @media (max-width: 768px) {
@@ -167,6 +203,13 @@ export default css`
     .nav-elements ul li {
       margin-right: unset;
       margin-top: 22px;
+    }
+    .hero-image {
+      width: 100%;
+      height: 100%;
+    }
+    .search-container {
+      width: 50%;
     }
   }
 `;

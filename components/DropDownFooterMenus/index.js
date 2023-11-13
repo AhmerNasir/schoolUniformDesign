@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import styles from "./styles";
+import Link from "next/link";
 
 const FooterDropdownMenu = ({ title, list1, list2, list3 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,9 @@ const FooterDropdownMenu = ({ title, list1, list2, list3 }) => {
         {isOpen && (
           <div className="dropdown-content">
             <ul>
-              <li>{list1}</li>
-              <li>{list2}</li>
-              <li>{list3}</li>
+              <li><Link href="#">{list1}</Link></li>
+              <li><Link href="#">{list2}</Link></li>
+              <li><Link href="#">{list3}</Link></li>
             </ul>
           </div>
         )}

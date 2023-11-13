@@ -63,7 +63,7 @@ export default css`
   
   @media (max-width: 600px) {
     .menu-icon {
-      display: block;
+      display: flex;
       cursor: pointer;
     }
   

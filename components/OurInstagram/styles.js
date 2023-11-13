@@ -57,13 +57,51 @@ export default css `
   .insta-divider {
     height: 1px;
     background-color: #000;
+    width: 42%;
+  }
+
+  .hr-line {
+    height: 1px;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
     margin-bottom: 30px;
+  }
+  
+  .our-insta-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .our-insta-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .our-insta-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16%;
+  }
+  
+  .our-insta-header > p {
+    color: #000;
+  }
+
+  .our-insta-header > h1 {
+    margin: 0;
   }
 
   @media (max-width: 768px) {
     .instagram-image-container {
     display: flex;
     justify-content: center;
+    }
+    .our-insta-header {
+      width: 45%;
     }
   }
 `

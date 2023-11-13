@@ -4,6 +4,9 @@ import styles from "./styles";
 import classNames from "classnames";
 import UniformSizeTable from "../UniformSizeTable";
 import FooterDropdownMenu from "../DropDownFooterMenus";
+import Navbar from "../Navbar";
+import { IoIosArrowForward } from "react-icons/io";
+import useResponsiveWindow from "@/hooks/useResponsiveWindow";
 
 const TIPS = [
   {
@@ -40,14 +43,30 @@ const TIPS = [
 
 function SizeGuide() {
   const [selectedOption, setSelectedOption] = useState("Boys");
+  const isMobile = useResponsiveWindow();
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
   return (
-    <BaseLayout changeHeader>
+    <BaseLayout>
+      <section className="hero-image">
+        <Navbar />
+        <div className="header-container">
+        <div className="wrapper">
+          <div className="main-title">Size Guide</div>
+          <div className="main-sub-title">
+            We want to make sure you can find the perfect size for your child
+          </div>
+          <div className="header-divider"></div>
+          <div className="add-to-bag">
+            <div>Find Now</div>
+            <IoIosArrowForward />
+          </div>
+        </div>
+        </div>
+      </section>
       <div className="main-container">
-        <FooterDropdownMenu />
         <div className="option-button-container">
           <button
             className={classNames("option-buttons", {
@@ -84,11 +103,11 @@ function SizeGuide() {
         </div>
         <UniformSizeTable />
         <UniformSizeTable trousersOptions />
-        <div className="our-company-container">
-          <div className="our-product-wrapper">
-            <div className="divider" />
-            <h1>Measuring Tips</h1>
-            <div className="divider" />
+        <div className="measuring-container">
+          <div className="measuring-wrapper">
+            <div className="measuring-divider" />
+            {isMobile ? <h3>Measuring Tips</h3>:<h1>Measuring Tips</h1>}
+            <div className="measuring-divider" />
           </div>
         </div>
         <div className="tips-container">

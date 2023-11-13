@@ -1,6 +1,57 @@
 import css from "styled-jsx/css";
 
 export default css`
+.hero-image {
+  background-image: url(/static/images/header-uniform.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 32%;
+}
+
+.add-to-bag {
+  background-color: #3b4463;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.main-sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-divider {
+  height: 2px;
+  background-color: rgba(255,255,255,0.8);
+  width: 50%;
+  margin-top: 20px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
   .main-container {
     padding: 0 7%;
   }
@@ -8,7 +59,7 @@ export default css`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .option-buttons {
@@ -120,6 +171,25 @@ export default css`
     font-size: 18px;
   }
 
+  .measuring-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .measuring-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .measuring-divider {
+    height: 1px;
+    background-color: #000;
+    width: 35%; 
+  }
+
   @media(max-width: 576px) {
     .main-container {
       padding: 0 4%;
@@ -143,5 +213,17 @@ export default css`
     .tips-map {
       width: 75%;
     }
-  }
+    .wrapper {
+      margin-top: 20px;
+      width: 70%;
+    }
+    .measuring-divider {
+      width: 30%; 
+    }
+
+    @media(max-width: 900px) {
+      .measuring-divider {
+        width: 30%; 
+      }
+    }
 `;

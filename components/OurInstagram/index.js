@@ -5,13 +5,13 @@ import styles from "./styles";
 function OurInstagram() {
   return (
     <>
-      <div className="our-product-container">
-        <div className="our-product-wrapper">
-          <div className="divider" />
-          <div className="our-product-header">
+      <div className="our-insta-container">
+        <div className="our-insta-wrapper">
+          <div className="insta-divider" />
+          <div className="our-insta-header">
             <h1>Our Instagram</h1>
           </div>
-          <div className="divider" />
+          <div className="insta-divider" />
         </div>
       </div>
       <div className="instagram-block-container">
@@ -49,6 +49,7 @@ function OurInstagram() {
           </div>
         </div>
       </div>
+      <div className="hr-line"></div>
       <style jsx>{styles}</style>
     </>
   );

@@ -3,6 +3,10 @@ import BaseLayout from "../BaseLayout";
 import styles from "./styles";
 import Testimonials from "../Testimonials";
 import ContactUs from "../ContactUs";
+import Navbar from "../Navbar";
+import { IoIosArrowForward } from "react-icons/io";
+import useResponsiveWindow from "@/hooks/useResponsiveWindow";
+import Image from "next/image";
 
 const CARD_ITEMS = [
   {
@@ -41,9 +45,54 @@ const COMAPANY_VALUES = [
 ];
 
 function About() {
+  const isMobile = useResponsiveWindow();
   return (
     <BaseLayout>
-    <>
+    <section className="hero">
+        <div className="header-image">
+          <Navbar />
+          <div className="nav-wrapper">
+            <div className="right-side">
+              {!isMobile && (
+                <>
+              <div className="header-title">About</div>
+              <div className="header-container">
+              <div className="header-title"> Comapny</div>
+              <div className="header-divider"/>
+              </div>
+              <p className="header-sub-title">
+                Free shipping on all orders over $100.Free shipping on all
+                orders over $100.Free shipping on all orders over $100
+              </p>
+              </>
+              )}
+              {isMobile && (
+                <>
+              <div className="header-title">About Comapny</div>
+              <p className="header-sub-title">
+              Free shipping on all orders over $100.Free shipping on all
+              orders over $100.Free shipping on all orders over $100
+            </p>
+            </>
+              )}
+             
+              <div className="add-to-bag">
+                <div>Read More</div>
+                <IoIosArrowForward />
+              </div>
+            </div>
+            <div className="left-side">
+              <Image
+                src="/static/images/hoddie.jpg"
+                alt="hoddie-image"
+                width={isMobile ? 200 : 300}
+                height={isMobile ? 200 : 300}
+                style={{ mixBlendMode: "darken" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="main-container">
         <div className="main-wrapper">
           <div className="title">Our Services</div>
@@ -70,9 +119,9 @@ function About() {
         </div>
         <div className="our-company-container">
           <div className="our-product-wrapper">
-            <div className="divider" />
-            <h1>Company Values</h1>
-            <div className="divider" />
+            <div className="hr-line" />
+            {isMobile ? <h3>Company Values</h3> :<h1>Company Values</h1>}
+            <div className="hr-line" />
           </div>
         </div>
         <div className="company-values-container">
@@ -107,14 +156,13 @@ function About() {
 <section className="contact-form">
         <div className="our-company-container">
           <div className="our-product-wrapper">
-            <div className="divider" />
+            <div className="hr-line" />
             <h1>Contact Us</h1>
-            <div className="divider" />
+            <div className="hr-line" />
           </div>
         </div>
         <ContactUs />
         </section>
-      </>
       <style jsx>{styles}</style>
     </BaseLayout>
   );

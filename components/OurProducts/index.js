@@ -1,5 +1,6 @@
 import React from "react";
 import Products from "../Products";
+import styles from "./styles";
 
 function OurProducts() {
   return (
@@ -25,6 +26,7 @@ function OurProducts() {
         </div>
       </div>
       <Products />
+      <style jsx>{styles}</style>
     </>
   );
 }
