@@ -2,12 +2,14 @@ import css from "styled-jsx/css";
 
 export default css`
 .hero-image {
+  position: relative;
   background-image: url(/static/images/header-uniform.png);
-  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 300px;
+  height: 350px;
+  border-bottom-right-radius: 100% 70%;
+  border-bottom-left-radius: 100% 70%;
 }
 
 .wrapper {
@@ -16,20 +18,22 @@ export default css`
   justify-content: center;
   flex-direction: column;
   margin-top: 50px;
-  width: 32%;
+  width: 30%;
 }
 
 .add-to-bag {
   background-color: #3b4463;
-  display: flex;
-  align-items: center;
-  width: 120px;
-  height: 40px;
-  border-radius: 10px;
-  justify-content: center;
-  color: #fff;
-  margin-top: 40px;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: -15px;
+    text-transform: uppercase;
 }
 
 .main-sub-title {
@@ -190,9 +194,20 @@ export default css`
     width: 35%; 
   }
 
-  @media(max-width: 576px) {
+  @media (max-width: 900px) {
+    .measuring-divider {
+      width: 30%; 
+    }
+  }
+
+  @media (max-width: 768px) {
     .main-container {
       padding: 0 4%;
+    }
+    .hero-image {
+      height: 300px;
+      border-bottom-right-radius: 100% 40%;
+      border-bottom-left-radius: 100% 40%;
     }
     .tips-number {
       width: 30px;
@@ -213,17 +228,11 @@ export default css`
     .tips-map {
       width: 75%;
     }
-    .wrapper {
-      margin-top: 20px;
-      width: 70%;
-    }
     .measuring-divider {
       width: 30%; 
     }
-
-    @media(max-width: 900px) {
-      .measuring-divider {
-        width: 30%; 
-      }
+    .wrapper {
+      width: 70%;
     }
+  }
 `;

@@ -2,11 +2,14 @@ import css from "styled-jsx/css";
 
 export default css`
   .hero-image {
+    position: relative;
     background-image: url(/static/images/header-uniform.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 400px;
+    height: 350px;
+    border-bottom-right-radius: 100% 70%;
+    border-bottom-left-radius: 100% 70%;
   }
 
   .wrapper {
@@ -14,8 +17,7 @@ export default css`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 30px;
-    margin-top: 50px;
+    margin-top: 77px;
   }
 
   .add-to-bag {
@@ -27,8 +29,10 @@ export default css`
     border-radius: 10px;
     justify-content: center;
     color: #fff;
-    margin-top: 80px;
     cursor: pointer;
+    position: absolute;
+    bottom: -15px;
+    text-transform: uppercase;
   }
 
   .main-title {
@@ -55,6 +59,7 @@ export default css`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 30px;
   }
 
   .search-container {
@@ -165,15 +170,15 @@ export default css`
   }
 
   @media (max-width: 768px) {
+    .hero-image {
+      height: 300px;
+    }
     .product-left-side {
       width: 100%;
     }
     .shop-main-container {
       padding: 0 30px;
     }
-  }
-
-  @media (max-width: 600px) {
     .menu-icon {
       display: block;
       cursor: pointer;
@@ -204,12 +209,19 @@ export default css`
       margin-right: unset;
       margin-top: 22px;
     }
-    .hero-image {
-      width: 100%;
-      height: 100%;
-    }
     .search-container {
       width: 50%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-image {
+      height: 300px;
+      border-bottom-right-radius: 100% 40%;
+      border-bottom-left-radius: 100% 40%;
+    }
+    .wrapper {
+      margin-top: 35px;
     }
   }
 `;

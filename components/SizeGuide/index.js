@@ -53,17 +53,26 @@ function SizeGuide() {
       <section className="hero-image">
         <Navbar />
         <div className="header-container">
-        <div className="wrapper">
-          <div className="main-title">Size Guide</div>
-          <div className="main-sub-title">
-            We want to make sure you can find the perfect size for your child
+          <div className="wrapper">
+            <div className="main-title">Size Guide</div>
+            <div className="main-sub-title">
+              We want to make sure you can find the perfect size for your child
+            </div>
+            <div className="header-divider"></div>
           </div>
-          <div className="header-divider"></div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
           <div className="add-to-bag">
             <div>Find Now</div>
             <IoIosArrowForward />
           </div>
-        </div>
         </div>
       </section>
       <div className="main-container">
@@ -106,7 +115,7 @@ function SizeGuide() {
         <div className="measuring-container">
           <div className="measuring-wrapper">
             <div className="measuring-divider" />
-            {isMobile ? <h3>Measuring Tips</h3>:<h1>Measuring Tips</h1>}
+            {isMobile ? <h3>Measuring Tips</h3> : <h1>Measuring Tips</h1>}
             <div className="measuring-divider" />
           </div>
         </div>

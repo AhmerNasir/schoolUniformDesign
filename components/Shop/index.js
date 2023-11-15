@@ -45,11 +45,13 @@ function Shop() {
           <Navbar />
           <div className="wrapper">
             <div className="main-title">School Uniforms</div>
-            <div className="add-to-bag">
+          </div>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+          <div className="add-to-bag">
               <div>Shop Now</div>
               <IoIosArrowForward />
             </div>
-          </div>
+            </div>
       </section>
       <div className="shop-main-container">
         {!isMobile && (
